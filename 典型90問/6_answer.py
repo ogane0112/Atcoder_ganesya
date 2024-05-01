@@ -6,7 +6,7 @@ def calc_next(S):
 
     # 答え
     res = [[N] * 26 for _ in range(N + 1)]
-    print(res)
+    
 
     # 後ろから見る
     for i in range(N - 1, -1, -1):
