@@ -7,7 +7,5 @@ for i in range(100):
     
 a_list_reverse = a_list[::-1]
 
-for i in a_list_reverse:
-    print(i)
-    
+print(*a_list_reverse)
     
