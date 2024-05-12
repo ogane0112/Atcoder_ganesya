@@ -1,4 +1,5 @@
 n = input()
+
 flag = True
 count_dict = {i:0 for i in range(1, 101)}
 unique = set(n)
@@ -10,7 +11,6 @@ for i in unique:
 for key,value in count_dict.items():
     if value != 2 and value != 0:
         flag = False
-       
         break
 
 if flag:
