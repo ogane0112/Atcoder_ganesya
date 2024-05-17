@@ -4,6 +4,8 @@ a = []
 ans = 0
 for i in range(n):
     a.append(int(input()))
-for i in range(n):
-    for j in a:
-        if 1+2
+ans += n
+for i in range(1,n):
+        while i+ (2*a[i]) >= d:
+            ans+= 1
+print(ans+x)   
