@@ -15,3 +15,4 @@ class Solution:
         if not root.left and not root.right and root.val == target:
             return None
         return root
+
