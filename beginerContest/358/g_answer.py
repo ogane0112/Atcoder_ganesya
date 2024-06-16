@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-
-INF = 1 << 60
+INF = 10**18
 
 H, W, K = map(int, input().split())
 
@@ -9,8 +7,6 @@ si -= 1
 sj -= 1
 
 A = [list(map(int, input().split())) for _ in range(H)]
-
-# (i, j)に到達するまでに同じところを通らずにk回移動した時の、得点の最大値
 dp = [[[-INF] * (H * W + 1) for _ in range(W)] for _ in range(H)]
 
 dp[si][sj][0] = 0
@@ -19,9 +15,11 @@ for k in range(H * W):
     for i in range(H):
         for j in range(W):
             for ni, nj in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
+                #盤面にあるかどうか判定
                 if ni < 0 or ni >= H or nj < 0 or nj >= W:
                     continue
                 dp[ni][nj][k + 1] = max(dp[ni][nj][k + 1], dp[i][j][k] + A[ni][nj])
+                
 
 res = 0
 
